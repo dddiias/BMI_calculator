@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/style.css">
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <a class="navbar-brand" href="/bmicalculator">BMI Calculator</a>
+        <a class="navbar-brand" href="/history">History</a>
+    </nav>
+
+    <div class="container mt-5">
+        <form action="/bmicalculator" method="post" id="bmiForm">
+            <div class="form-group">
+                <label for="height">Height (meters/inches)</label>
+                <input type="number" class="form-control" id="height" name="height" placeholder="Enter height" required>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight (kilograms/pounds)</label>
+                <input type="number" class="form-control" id="weight" name="weight" placeholder="Enter weight" required>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" class="form-control" id="age" name="age" placeholder="Enter age" required>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <select class="form-control" id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="units">Units</label>
+                <select class="form-control" id="units" name="units" required>
+                    <option value="metric">Metric</option>
+                    <option value="imperial">Imperial</option>
+                </select>
+            </div>
+
+            <button type="button" class="btn btn-primary" onclick="calculateBMI()">Calculate BMI</button>
+        </form>
+    </div>
+
+    <footer class="footer mt-5">
+        <div class="container text-center">
+            <p>Dias Salakhutdionov SE-2203</p>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="/js/validation.js"></script>
+</body>
+</html>
